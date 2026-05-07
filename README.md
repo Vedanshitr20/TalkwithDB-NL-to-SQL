@@ -1124,4 +1124,4 @@ graph LR
 ---
 
 *TalkWithDB – Chat with SQL Assignment Report | OneClarity Internship Evaluation | 18 - 21 February 2026*  
-*Author: Aditya Tiwari | github.com/adityatiwari12*
+*Author: Vedanshi dabbawala | github.com/Vedanshitr20*
