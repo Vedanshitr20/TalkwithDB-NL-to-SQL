@@ -1,0 +1,16 @@
+{
+    "venvPath": ".",
+    "venv": ".venv",
+    "include": [
+        "src",
+        "apps",
+        "scripts",
+        "main.py"
+    ],
+    "pythonVersion": "3.11",
+    "typeCheckingMode": "basic",
+    "reportMissingImports": false,
+    "extraPaths": [
+        "src"
+    ]
+}

@@ -1,0 +1,238 @@
+{
+  "tables": [
+    {
+      "name": "projects",
+      "columns": [
+        {
+          "name": "id",
+          "data_type": "integer",
+          "is_primary_key": true,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        },
+        {
+          "name": "name",
+          "data_type": "character varying",
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        },
+        {
+          "name": "description",
+          "data_type": "text",
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        },
+        {
+          "name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        }
+      ],
+      "row_count": 250,
+      "checksum": "fba8d810804781c05fd3a77e89dc4591",
+      "last_updated": "2026-04-24T22:56:24.639346"
+    },
+    {
+      "name": "query_cache",
+      "columns": [
+        {
+          "name": "cache_key",
+          "data_type": "character varying",
+          "is_primary_key": true,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        },
+        {
+          "name": "normalized_question",
+          "data_type": "text",
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        },
+        {
+          "name": "max_tables",
+          "data_type": "integer",
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        },
+        {
+          "name": "response",
+          "data_type": "text",
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        },
+        {
+          "name": "sql_query",
+          "data_type": "text",
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        },
+        {
+          "name": "results",
+          "data_type": "jsonb",
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        },
+        {
+          "name": "metadata",
+          "data_type": "jsonb",
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        },
+        {
+          "name": "hit_count",
+          "data_type": "integer",
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        },
+        {
+          "name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        },
+        {
+          "name": "last_used_at",
+          "data_type": "timestamp without time zone",
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        }
+      ],
+      "row_count": 5,
+      "checksum": "4142900f4d1d1943984c0de8db55078f",
+      "last_updated": "2026-04-24T22:56:24.694310"
+    },
+    {
+      "name": "tasks",
+      "columns": [
+        {
+          "name": "id",
+          "data_type": "integer",
+          "is_primary_key": true,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        },
+        {
+          "name": "title",
+          "data_type": "character varying",
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        },
+        {
+          "name": "status",
+          "data_type": "character varying",
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        },
+        {
+          "name": "assigned_to",
+          "data_type": "integer",
+          "is_primary_key": false,
+          "is_foreign_key": true,
+          "references_table": "users",
+          "references_column": "id"
+        },
+        {
+          "name": "project_id",
+          "data_type": "integer",
+          "is_primary_key": false,
+          "is_foreign_key": true,
+          "references_table": "projects",
+          "references_column": "id"
+        },
+        {
+          "name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        },
+        {
+          "name": "due_date",
+          "data_type": "date",
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        }
+      ],
+      "row_count": 12000,
+      "checksum": "6d723d6977eb16c1c688961b117a5012",
+      "last_updated": "2026-04-24T22:56:24.745407"
+    },
+    {
+      "name": "users",
+      "columns": [
+        {
+          "name": "id",
+          "data_type": "integer",
+          "is_primary_key": true,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        },
+        {
+          "name": "name",
+          "data_type": "character varying",
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        },
+        {
+          "name": "email",
+          "data_type": "character varying",
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        },
+        {
+          "name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null
+        }
+      ],
+      "row_count": 1200,
+      "checksum": "71fa5be39672f6100764b0dcf403cd20",
+      "last_updated": "2026-04-24T22:56:24.802391"
+    }
+  ],
+  "checksum": "0dc4668b06506b874d03f589aca9b536",
+  "created_at": "2026-04-24T22:56:24.802509"
+}
